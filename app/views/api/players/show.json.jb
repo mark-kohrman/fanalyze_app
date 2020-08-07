@@ -1,0 +1,10 @@
+{
+  id: @player.id,
+  first_name: @player.first_name,
+  last_name: @player.last_name,
+  position: @player.position,
+  nfl_team: @player.nfl_team,
+  projected_points: @player.projected_points,
+  weather_projected_points: @player.weather_projected_points, 
+  total_projected_points: @player.total_projected_points
+}
