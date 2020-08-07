@@ -19,7 +19,7 @@ class Api::PlayersController < ApplicationController
       nfl_team: params[:nfl_team],
       projected_points: params[:projected_points],
       weather_projected_points: params[:weather_projected_points], 
-      total_projected_points: calculated_total
+      total_projected_points: params[:total_projected_points]
     )
     @player.save
     render 'show.json.jb'
@@ -38,5 +38,12 @@ class Api::PlayersController < ApplicationController
     )
     @player.save
     render 'show.json.jb'
+  end
+
+  def destroy
+    @player = Player.find_by(id: params[:id])
+    @player.destroy
+
+    render json: {message: "The player has been deleted successfully."}
   end
 end
