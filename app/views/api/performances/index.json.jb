@@ -1,0 +1,21 @@
+@performances.map do |performance|
+{
+  player_name: performance.player_name,
+  position: performance.position,
+  nfl_team: performance.nfl_team,
+  passing_yds: performance.passing_yds,
+  passing_tds: performance.passing_tds,
+  interceptions: performance.interceptions,
+  passing_attempts: performance.passing_attempts,
+  completions: performance.completions,
+  rushing_yds: performance.rushing_yds,
+  rushing_tds: performance.rushing_tds,
+  receptions: performance.receptions,
+  targets: performance.targets,
+  rec_yds: performance.rec_yds,
+  fumble_losses: performance.fumble_losses,
+  ppr_fantasy_points: performance.ppr_fantasy_points,
+  standard_fantasy_points: performance.standard_fantasy_points,
+  half_ppr_fantasy_points: performance.half_ppr_fantasy_points
+}
+end

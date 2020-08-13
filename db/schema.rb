@@ -10,10 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_07_032755) do
+ActiveRecord::Schema.define(version: 2020_08_13_021738) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "performances", force: :cascade do |t|
+    t.string "player_name"
+    t.string "position"
+    t.string "nfl_team"
+    t.integer "passing_yds"
+    t.integer "passing_tds"
+    t.integer "interceptions"
+    t.integer "passing_attempts"
+    t.integer "completions"
+    t.integer "rushing_yds"
+    t.integer "rushing_tds"
+    t.integer "receptions"
+    t.integer "targets"
+    t.integer "rec_yds"
+    t.integer "fumble_losses"
+    t.integer "ppr_fantasy_points"
+    t.integer "standard_fantasy_points"
+    t.integer "half_ppr_fantasy_points"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "players", force: :cascade do |t|
     t.string "first_name"
