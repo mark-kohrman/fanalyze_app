@@ -13,6 +13,7 @@
   receptions: performance.receptions,
   targets: performance.targets,
   rec_yds: performance.rec_yds,
+  rec_tds: performance.rec_tds,
   fumble_losses: performance.fumble_losses,
   ppr_fantasy_points: performance.ppr_fantasy_points,
   standard_fantasy_points: performance.standard_fantasy_points,
