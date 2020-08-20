@@ -1,7 +1,6 @@
 {
   id: @player.id,
-  first_name: @player.first_name,
-  last_name: @player.last_name,
+  player_name: @player.player_name,
   position: @player.position,
   nfl_team: @player.nfl_team,
   projected_points: @player.projected_points,
