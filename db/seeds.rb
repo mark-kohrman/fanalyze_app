@@ -3315,26 +3315,42 @@
 #   puts "#{t.player_name}, had #{t.passing_yds} passing yards"
 # end
 
-require 'csv'
-csv_text = File.read(Rails.root.join('lib', 'seeds', '2019week1.csv'))
-puts csv_text
+# require 'csv'
+# csv_text = File.read(Rails.root.join('lib', 'seeds', '2019week1.csv'))
+# puts csv_text
 
-require 'csv'
-csv_text = File.read(Rails.root.join('lib', 'seeds', '2019week1.csv'))
-csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
-csv.each do |row|
-  puts row.to_hash
-  break
+# require 'csv'
+# csv_text = File.read(Rails.root.join('lib', 'seeds', '2019week1.csv'))
+# csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
+# csv.each do |row|
+#   puts row.to_hash
+#   break
+# end
+
+# require 'csv'
+# csv_text = File.read(Rails.root.join('lib', 'seeds', '2019week1.csv'))
+# csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
+# csv.each do |row|
+#   t = Player.new
+#   t.player_name = row['Player']
+#   t.position = row['Pos']
+#   t.nfl_team = row['Tm']
+#   t.save
+#   puts "#{t.player_name}, is on #{t.nfl_team}'s team"
+# end
+
+performances = Performance.all
+players = Player.all
+
+performances.each do |performance|
+  players.each do |player|
+    if performance[:player_name] == player[:player_name]
+      performance[:player_id] = player[:id]
+      performance.save
+    end
+  end
+  p performance
 end
 
-require 'csv'
-csv_text = File.read(Rails.root.join('lib', 'seeds', '2019week1.csv'))
-csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
-csv.each do |row|
-  t = Player.new
-  t.player_name = row['Player']
-  t.position = row['Pos']
-  t.nfl_team = row['Tm']
-  t.save
-  puts "#{t.player_name}, is on #{t.nfl_team}'s team"
-end
+
+

@@ -17,6 +17,7 @@
   fumble_losses: performance.fumble_losses,
   ppr_fantasy_points: performance.ppr_fantasy_points,
   standard_fantasy_points: performance.standard_fantasy_points,
-  half_ppr_fantasy_points: performance.half_ppr_fantasy_points
+  half_ppr_fantasy_points: performance.half_ppr_fantasy_points,
+  player_id: performance.player_id
 }
 end
