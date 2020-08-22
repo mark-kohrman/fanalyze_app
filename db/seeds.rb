@@ -3339,18 +3339,20 @@
 #   puts "#{t.player_name}, is on #{t.nfl_team}'s team"
 # end
 
-performances = Performance.all
-players = Player.all
+# performances = Performance.all
+# players = Player.all
 
-performances.each do |performance|
-  players.each do |player|
-    if performance[:player_name] == player[:player_name]
-      performance[:player_id] = player[:id]
-      performance.save
-    end
-  end
-  p performance
-end
+# performances.each do |performance|
+#   players.each do |player|
+#     if performance[:player_name] == player[:player_name]
+#       performance[:player_id] = player[:id]
+#       performance.save
+#     end
+#   end
+#   p performance
+# end
+
+
 
 
 

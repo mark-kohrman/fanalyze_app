@@ -8,10 +8,11 @@ Rails.application.routes.draw do
     post "/players" => "players#create"
     patch "/players/:id" => "players#update"
     delete "players/:id" => "players#destroy"
-  end
 
-  namespace :api do
+    post "/users" => "users#create"
+
     get "/performances" => "performances#index"
     get "/performances/:id" => "performances#show"
+
   end
 end
