@@ -5,9 +5,6 @@ Rails.application.routes.draw do
   namespace :api do
     get "/players" => "players#index"
     get "/players/:id" => "players#show"
-    post "/players" => "players#create"
-    patch "/players/:id" => "players#update"
-    delete "players/:id" => "players#destroy"
 
     post "/users" => "users#create"
 
@@ -16,6 +13,9 @@ Rails.application.routes.draw do
 
     get "/performances" => "performances#index"
     get "/performances/:id" => "performances#show"
+
+    get "/user_teams" => "user_teams#index"
+
 
   end
 end

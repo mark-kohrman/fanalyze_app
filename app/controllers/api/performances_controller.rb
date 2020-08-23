@@ -3,5 +3,6 @@ class Api::PerformancesController < ApplicationController
     @performances = Performance.all
     render 'index.json.jb'
   end
+  
 
 end

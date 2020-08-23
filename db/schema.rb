@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_22_153653) do
+ActiveRecord::Schema.define(version: 2020_08_23_000800) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,25 @@ ActiveRecord::Schema.define(version: 2020_08_22_153653) do
     t.integer "total_projected_points"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "user_teams", force: :cascade do |t|
+    t.string "user_team_name"
+    t.integer "player_projected_points"
+    t.integer "weather_projected_points"
+    t.integer "total_projected_points"
+    t.integer "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "qb_player_id"
+    t.integer "rb1_player_id"
+    t.integer "rb2_player_id"
+    t.integer "wr1_player_id"
+    t.integer "wr2_player_id"
+    t.integer "flex_player_id"
+    t.integer "te_player_id"
+    t.integer "kicker_player_id"
+    t.integer "dst_player_id"
   end
 
   create_table "users", force: :cascade do |t|
