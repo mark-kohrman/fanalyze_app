@@ -1,4 +1,5 @@
  @user_teams.map do |user_team|{
+   id: user_team.id,
    user_team_name: user_team.user_team_name,
    user_id: user_team.user_id,
    qb_player_id: user_team.qb_player_id,
