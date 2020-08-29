@@ -24,7 +24,7 @@ class Api::UserTeamsController < ApplicationController
       user_team_name: params[:user_team_name] || @user_team.user_team_name,   
       user_id: params[:user_id] || @user_team.user_id,
     )
-    @user_team.save
+    @user_team.save!
     render 'show.json.jb'
   end 
 end
