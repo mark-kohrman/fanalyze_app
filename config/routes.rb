@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   namespace :api do
     get "/players" => "players#index"
     get "/players/:id" => "players#show"
+    patch "/players/:id" => "players#update"
+
 
     post "/users" => "users#create"
 

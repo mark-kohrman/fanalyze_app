@@ -27,8 +27,7 @@ class Api::PlayersController < ApplicationController
   def update
     @player = Player.find_by(id: params[:id])
     @player.update(
-      first_name: params[:first_name] || @player.first_name,
-      last_name: params[:last_name] || @player.last_name,
+      player_name: params[:first_name] || @player.player_name,
       position: params[:position] || @player.position,
       nfl_team: params[:nfl_team] || @player.nfl_team,
       projected_points: params[:projected_points] || @player.projected_points,
