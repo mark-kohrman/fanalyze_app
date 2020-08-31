@@ -22,14 +22,14 @@
   # flex: Player.find_by(id: @user_team.flex_player_id),
   # te: Player.find_by(id: @user_team.te_player_id),
   # k: Player.find_by(id: @user_team.kicker_player_id),
-  qb: Player.find_by(player_name: @user_team.player_name),
-  rb1: Player.find_by(player_name: @user_team.player_name),
-  rb2: Player.find_by(player_name: @user_team.player_name),
-  wr1: Player.find_by(player_name: @user_team.player_name),
-  wr2: Player.find_by(player_name: @user_team.player_name),
-  flex: Player.find_by(player_name: @user_team.player_name),
-  te: Player.find_by(player_name: @user_team.player_name),
-  k: Player.find_by(player_name: @user_team.player_name),
+  qb: Player.find_by(player_name: @user_team.qb_player_name),
+  rb1: Player.find_by(player_name: @user_team.rb1_player_name),
+  rb2: Player.find_by(player_name: @user_team.rb2_player_name),
+  wr1: Player.find_by(player_name: @user_team.wr1_player_name),
+  wr2: Player.find_by(player_name: @user_team.wr2_player_name),
+  flex: Player.find_by(player_name: @user_team.flex_player_name),
+  te: Player.find_by(player_name: @user_team.te_player_name),
+  k: Player.find_by(player_name: @user_team.kicker_player_name),
 
 
 
