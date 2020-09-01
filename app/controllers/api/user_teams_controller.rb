@@ -23,10 +23,13 @@ class Api::UserTeamsController < ApplicationController
 
   def create
     # @qb_id = Player.find_by(player_name: params[:player_name]).id
+    p "$" * 50
+    p current_user
+    p "$" * 50
+
     @user_team = UserTeam.new(
       user_team_name: params[:user_team_name],
-      user_id: params[:user_id],
-      qb_player_id: @params[:qb_player_id],
+      qb_player_id: params[:qb_player_id],
       rb1_player_id: params[:rb1_player_id],
       rb2_player_id: params[:rb2_player_id],
       wr1_player_id: params[:wr1_player_id],
@@ -34,7 +37,8 @@ class Api::UserTeamsController < ApplicationController
       flex_player_id: params[:flex_player_id],
       te_player_id: params[:te_player_id],
       kicker_player_id: params[:kicker_player_id],
-      dst_player_id: params[:dst_player_id]
+      dst_player_id: params[:dst_player_id],
+      user_id: current_user.id
       )
     @user_team.save!
     p @user_team
