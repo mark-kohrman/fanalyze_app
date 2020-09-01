@@ -1,7 +1,19 @@
 class Api::UserTeamsController < ApplicationController
   def index
-    @user_teams = UserTeam.all
+
+    p "*" * 88
+    p current_user
+    p "*" * 88
+
+    # @user_teams = UserTeam.all
+
+    if current_user
+      @user_teams = UserTeam.order(:id => :desc)
+    else
+      @user_teams = []
+    end
     render 'index.json.jb'
+
   end
 
   def show
@@ -10,10 +22,11 @@ class Api::UserTeamsController < ApplicationController
   end
 
   def create
-      @user_team = UserTeam.create!(
+    # @qb_player_name = Player.find_by(player_name: params[:player_name]).player_id
+    @user_team = UserTeam.new(
       user_team_name: params[:user_team_name],
       user_id: params[:user_id],
-      qb_player_id: params[:qb_player_id],
+      qb_player_id: param[:qb_player_id],
       rb1_player_id: params[:rb1_player_id],
       rb2_player_id: params[:rb2_player_id],
       wr1_player_id: params[:wr1_player_id],
@@ -23,8 +36,11 @@ class Api::UserTeamsController < ApplicationController
       kicker_player_id: params[:kicker_player_id],
       dst_player_id: params[:dst_player_id]
       )
+    @user_team.save
+    p @user_team
+    # p @qb_player_name
  
-      render 'show.json.jb'
+    render 'show.json.jb'
   end
 
   def update
