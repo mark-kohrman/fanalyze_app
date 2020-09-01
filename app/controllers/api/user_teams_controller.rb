@@ -22,11 +22,11 @@ class Api::UserTeamsController < ApplicationController
   end
 
   def create
-    @qb_player_name = Player.find_by(player_name: params[:player_name])
+    # @qb_id = Player.find_by(player_name: params[:player_name]).id
     @user_team = UserTeam.new(
       user_team_name: params[:user_team_name],
       user_id: params[:user_id],
-      qb_player_id: @qb_player_name,
+      qb_player_id: @params[:qb_player_id],
       rb1_player_id: params[:rb1_player_id],
       rb2_player_id: params[:rb2_player_id],
       wr1_player_id: params[:wr1_player_id],
@@ -36,9 +36,10 @@ class Api::UserTeamsController < ApplicationController
       kicker_player_id: params[:kicker_player_id],
       dst_player_id: params[:dst_player_id]
       )
+    @user_team.save!
     p @user_team
-    p "&" * 44
-    p @qb_player_name
+    # p "&" * 44
+    # p @qb_id
  
     render 'show.json.jb'
   end

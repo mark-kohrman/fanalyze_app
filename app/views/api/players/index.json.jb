@@ -1,11 +1,11 @@
 @players.map do |player|
-{
-  id: player.id,
-  player_name: player.player_name,
-  position: player.position,
-  nfl_team: player.nfl_team,
-  projected_points: player.projected_points,
-  weather_projected_points: player.weather_projected_points, 
-  total_projected_points: player.total_projected_points
-}
+  {
+    id: player.id,
+    player_name: player.player_name,
+    position: player.position,
+    nfl_team: player.nfl_team,
+    projected_points: player.projected_points,
+    weather_projected_points: player.weather_projected_points, 
+    total_projected_points: player.total_projected_points
+  }
 end
