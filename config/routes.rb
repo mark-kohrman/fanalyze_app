@@ -20,9 +20,7 @@ Rails.application.routes.draw do
     get "/user_teams/:id" => "user_teams#show"
     post "/user_teams" => "user_teams#create"
     patch "/user_teams/:id" => "user_teams#update"
-
-
-    
+    delete "/user_teams/:id" => "user_teams#destroy"
 
 
   end
