@@ -1,7 +1,7 @@
 {
   id: @user_team.id,
   user_team_name: @user_team.user_team_name,
-  user_id: @user_team.user_id,
+  user_id: current_user.id,
   qb_player_id: @user_team.qb_player_id,
   rb1_player_id: @user_team.rb1_player_id,
   rb2_player_id: @user_team.rb2_player_id,
