@@ -14,6 +14,7 @@
   player_projected_points: @user_team.player_projected_points,
   weather_projected_points: @user_team.weather_projected_points,
   total_projected_points: @user_team.total_projected_points,
+  created_at: @user_team.created_at,
   qb: Player.find_by(id: @user_team.qb_player_id),
   rb1: Player.find_by(id: @user_team.rb1_player_id),
   rb2: Player.find_by(id: @user_team.rb2_player_id),
