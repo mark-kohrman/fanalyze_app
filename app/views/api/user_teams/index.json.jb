@@ -15,7 +15,5 @@
    weather_projected_points: user_team.weather_projected_points,
    total_projected_points: user_team.total_projected_points,
    created_at: user_team.created_at.to_date,
-
-
  }
-end 
+ end 
