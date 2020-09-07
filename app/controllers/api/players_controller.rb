@@ -11,14 +11,16 @@ class Api::PlayersController < ApplicationController
   end
 
   def create
+    total_projected_points = params[:projected_points].to_i + params[:weather_projected_points].to_i
    
 
     @player = Player.new(
-      player_name: params[:first_name],
+      player_name: params[:player_name],
+      position: params[:position],
       nfl_team: params[:nfl_team],
       projected_points: params[:projected_points],
       weather_projected_points: params[:weather_projected_points], 
-      total_projected_points: params[:total_projected_points]
+      total_projected_points: total_projected_points
     )
     @player.save
     render 'show.json.jb'

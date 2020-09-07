@@ -1,0 +1,15 @@
+{
+  id: @projection["PlayerID"],
+  player_name: @projection["Name"],
+  nfl_team: @projection["Team"],
+  position: @projection["Position"],
+  opponent: @projection["Opponent"],
+  home_or_away: @projection["HomeOrAway"],
+  current_weather_desc: @current_weather_desc,
+  temperature: @temperature,
+  initial_projection: @projection["FantasyPoints"],
+  weeather_projected_points: @weather_projected_points,
+  total_projection: @total_projection
+
+
+}

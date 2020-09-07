@@ -5,13 +5,19 @@ Rails.application.routes.draw do
   namespace :api do
     get "/players" => "players#index"
     get "/players/:id" => "players#show"
+    post "/players" => "players#create"
     patch "/players/:id" => "players#update"
-
+    delete "/players/:id" => "players#destroy"
 
     post "/users" => "users#create"
 
     post "/sessions" => "sessions#create"
 
+    get "/projections" => "projections#index"
+    get "/projections/:id" => "projections#show"
+
+    get "/temperatures" => "temperatures#index"
+    get "/temperatures/:id" => "temperatures#show"
 
     get "/performances" => "performances#index"
     get "/performances/:id" => "performances#show"

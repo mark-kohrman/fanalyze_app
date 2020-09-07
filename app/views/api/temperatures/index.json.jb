@@ -1,0 +1,14 @@
+@projections.map do |projection| 
+  {
+  id: projection["PlayerID"],
+  player_name: projection["Name"],
+  nfl_team: projection["Team"],
+  position: projection["Position"],
+  opponent: projection["Opponent"],
+  home_or_away: projection["HomeOrAway"],
+  initial_projection: projection["FantasyPoints"],
+  current_weather_desc: @current_weather_desc
+
+
+}
+end

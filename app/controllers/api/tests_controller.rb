@@ -1,4 +1,4 @@
-class Api::UserTeamsController < ApplicationController
+class Api::TestsController < ApplicationController
   def index
 
     p "*" * 88
@@ -23,20 +23,20 @@ class Api::UserTeamsController < ApplicationController
   end
 
   def create
-    qb_id = Player.find_by(player_name: params[:qb_player_id]).id
-    rb1_id = Player.find_by(player_name: params[:rb1_player_id]).id
-    rb2_id = Player.find_by(player_name: params[:rb2_player_id]).id
-    wr1_id = Player.find_by(player_name: params[:wr1_player_id]).id
-    wr2_id = Player.find_by(player_name: params[:wr2_player_id]).id
-    flex_id = Player.find_by(player_name: params[:flex_player_id]).id
-    te_id = Player.find_by(player_name: params[:te_player_id]).id
-    kicker_id = Player.find_by(player_name: params[:kicker_player_id]).id
 
-    p "$" * 50
-    p current_user
-    p "$" * 50
+    response = HTTP.get("https://api.sportsdata.io/v3/nfl/projections/json/PlayerGameProjectionStatsByWeek/2020/1?key=")
+    @test = response.parse
+    p @test
+    # test_qb = @test.find_by(player_name: params[:qb_player_id]).id
+    # test_rb1= @test.find_by(player_name: params[:rb1_player_id]).id
+    # test_rb2 = @re.find_by(player_name: params[:rb2_player_id]).id
+    # test_wr1 = Player.find_by(player_name: params[:wr1_player_id]).id
+    # test_wr2 = Player.find_by(player_name: params[:wr2_player_id]).id
+    # test_flex = Player.find_by(player_name: params[:flex_player_id]).id
+    # test_te = Player.find_by(player_name: params[:te_player_id]).id
+    # test_kicker = Player.find_by(player_name: params[:kicker_player_id]).id
 
-    @user_team = UserTeam.new(
+    @test= Test.new(
       user_team_name: params[:user_team_name],
       qb_player_id: qb_id,
       rb1_player_id: rb1_id,

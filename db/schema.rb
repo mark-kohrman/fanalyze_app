@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_31_180302) do
+ActiveRecord::Schema.define(version: 2020_09_06_191937) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -67,15 +67,6 @@ ActiveRecord::Schema.define(version: 2020_08_31_180302) do
     t.integer "te_player_id"
     t.integer "kicker_player_id"
     t.integer "dst_player_id"
-    t.string "player_name"
-    t.string "qb_player_name"
-    t.string "rb1_player_name"
-    t.string "rb2_player_name"
-    t.string "wr1_player_name"
-    t.string "wr2_player_name"
-    t.string "te_player_name"
-    t.string "flex_player_name"
-    t.string "kicker_player_name"
   end
 
   create_table "users", force: :cascade do |t|

@@ -1,0 +1,10 @@
+@projections.map do |projection|
+  {
+  id: projection["PlayerID"],
+  player_name: projection["Name"],
+  nfl_team: projection["Team"],
+  home_or_away: projection["HomeOrAway"],
+  opponent: projection["Opponent"],
+  }
+end
+
